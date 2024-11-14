@@ -1,6 +1,7 @@
 from mastermind import game
 from animalesDeLaSelva import juego_preguntas
 from AdivinarElNumero import juego_adivina_numero
+from QUIZ import juegoquiz
 
 var = 0
 
@@ -15,6 +16,7 @@ while var == 0:
           1) Mastermind
           2) Animales de la selva
           3) Adivina el número
+          4) Quiz
          --------------------------- 
           """)
 
@@ -26,6 +28,8 @@ while var == 0:
         juego_preguntas()
     elif juego == 3:
         juego_adivina_numero()
+    elif juego == 4:
+        juegoquiz()
 
     sigue = input("¿Quiere seguir jugando? s (si) o n (no): ").lower()
     if sigue == 's':

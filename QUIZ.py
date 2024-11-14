@@ -1,5 +1,5 @@
-    # Defini las preguntas y respuestas del quiz
-def juegoquiz ():
+# Defini las preguntas y respuestas del quiz
+def juegoquiz():
     quiz = [
         {
             "pregunta": "¿Cuál es el planeta más grande del sistema solar?",
@@ -40,20 +40,24 @@ def juegoquiz ():
             print(pregunta["pregunta"])
             for opcion in pregunta["opciones"]:
                 print(opcion)
-            
+
             # Solicitar al usuario que ingrese su respuesta
-            respuesta_usuario = input("Elige una opción (A, B, C, D): ").upper()
-            
+            respuesta_usuario = input(
+                "Elige una opción (A, B, C, D): ").upper()
+
             # Verificar si la respuesta es correcta o incorrecta
             if respuesta_usuario == pregunta["respuesta_correcta"]:
                 print("¡Correcto!\n")
                 puntaje += 1
             else:
-                print(f"Incorrecto. La respuesta correcta era {pregunta['respuesta_correcta']}.\n")
-        
+                print(f"Incorrecto. La respuesta correcta era {
+                      pregunta['respuesta_correcta']}.\n")
+
         print(f"Tu puntaje final es: {puntaje}/{len(quiz)}")
 
-    # Ejecutamos la función del quiz
     ejecutar_quiz()
-    if __name__=="__main__":
+
+    if __name__ == "__main__":
         juegoquiz()
+
+# Ejecutamos la función del quiz
